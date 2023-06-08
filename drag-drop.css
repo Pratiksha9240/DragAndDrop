@@ -1,0 +1,55 @@
+#h1{
+    color: pink;
+    text-shadow: 4px 4px 5px red;
+    text-align: center;
+}
+html{
+    background-color: rgb(181, 173, 173);
+}
+
+.flex-container {
+    display: flex;
+}
+
+.flex-child {
+    flex: 1;
+    border: 2px solid yellow;
+}  
+
+.flex-child:first-child {
+    margin-right: 20px;
+} 
+
+.imgBox{
+    background-image: url("./Assets/cake1.jpg");
+    height: 100px;
+    width: 100px;
+    position: relative;
+    top: 7px;
+    left: 7px;
+    cursor: pointer;
+}
+
+.whiteBox{
+    display: inline-block;
+    background-color: white;
+    height: 115px;
+    width: 115px;
+    margin: 10px;
+}
+
+.dragBox{
+    display: inline-block;
+    background-color: white;
+    height: 115px;
+    width: 115px;
+    margin: 10px;
+}
+
+.hold{
+    border: solid blue 3px;
+}
+
+.hide{
+    display: none;
+}
