@@ -53,3 +53,15 @@ html{
 .hide{
     display: none;
 }
+
+.dashed{
+    background-color: wheat;
+    border: dashed;
+}
+
+.notify{
+    height: 20px;
+    background-color: green;
+    text-align: center;
+    color: white;
+}
