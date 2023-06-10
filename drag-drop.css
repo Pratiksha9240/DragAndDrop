@@ -20,8 +20,7 @@ html{
     margin-right: 20px;
 } 
 
-.imgBox{
-    background-image: url("./Assets/cake1.jpg");
+.imgBox1{
     height: 100px;
     width: 100px;
     position: relative;
@@ -64,4 +63,11 @@ html{
     background-color: green;
     text-align: center;
     color: white;
+}
+
+.button{
+    height: 40px;
+    width: 80px;
+    background-color: pink;
+    margin-left: 700px;
 }

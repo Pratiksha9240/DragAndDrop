@@ -1,22 +1,20 @@
-const images = document.getElementsByClassName("imgBox");
-
 const boxes = document.getElementsByClassName("dragBox");
 
 const div = document.querySelector('.notify');
 
-for (image of images) {
-  image.addEventListener("dragstart", (e) => {
-    console.log("Drag started");
+
+function drag(e){
+  console.log("Drag started");
     e.target.className += " hold";
+    e.dataTransfer.setData("text", e.target.id);
     setTimeout(() => {
       e.target.className = "hide";
     }, 0);
-  });
+}
 
-  image.addEventListener("dragend", (e) => {
-    console.log("Drag ended");
-    e.target.className = 'imgBox'
-  });
+function dragend(e){
+  e.target.className = 'imgBox1'
+
 }
 
 for (box of boxes) {
@@ -37,10 +35,8 @@ for (box of boxes) {
 
   box.addEventListener("drop", (e) => {
     console.log("drop has been triggered");
-    e.target.append(image)
-    // setTimeout(() => {
-    //     e.target.className = "imgBox dragBox";
-    //   }, 0);
+    var data = e.dataTransfer.getData("text");
+    e.target.append(document.getElementById(data));
     div.textContent = 'Image dropped successfully'
     div.className = 'notify'
 
@@ -52,6 +48,5 @@ for (box of boxes) {
 }
 
 function reset(){
-    image.className = 'imgBox'
-    box.className = 'dragBox'
+    location.reload()
 }
